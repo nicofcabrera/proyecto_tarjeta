@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tarjeta Credito propuesta HTML,CSS y JS</title>
+</head>
+<body>
+    <main>
+        <section class="contenedor">
+            <article class="tarjeta" id="tarjeta">
+                <figure class="tarjeta_contenedor_logo">
+                    <img src="img/mastercard.png" alt="logo tarjeta">
+                </figure>
+                <p class="tarjeta_numero">#### #### #### 1234</p>
+                <p class="tarjeta_nombre">Nicolas Cabre</p>
+                <div class="tarjeta_exp_ccv">
+                    <p>MM/YY</p>
+                    <p>XXX</p>
+                </div>
+            </article>
+            <article class="formulario_contenedor">
+                <form action="/">
+                    <h2>Carga tus datos</h2>
+                    <fieldset>
+                        <input type="text" placeholder="Numero tarjeta">
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" placeholder="Nombre y apellido">
+                    </fieldset>
+                    <fieldset class="form_exp_ccv">
+                        <input type="text" placeholder="MM/YY">
+                        <input type="text" placeholder="CCV">
+                    </fieldset>
+                    <div class="btn_contenedor">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
