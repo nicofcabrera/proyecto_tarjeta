@@ -24,27 +24,27 @@
                 <form action="/" id="formulario">
                     <h2>Carga tus datos</h2>
                     <fieldset>
-                        <label for="inputNumero">Numero de la tarjeta</label>
-                        <input id="inputNumero" maxlength="19" type="text" placeholder="Numero tarjeta">
+                        <label for="inputNumero">Ingresar solo números</label>
+                        <input id="inputNumero" maxlength="19" type="text" placeholder="Numero tarjeta" required>
                     </fieldset>
                     <fieldset>
                         <label for="inputNombres">Nombre y apellido</label>
-                        <input id="inputNombres" type="text" placeholder="Ej: Carlos Juarez">
+                        <input id="inputNombres" type="text" placeholder="Ej: Carlos Juarez" required>
                     </fieldset>
                     <fieldset class="form_exp_ccv">
                         <div>
-                            <select name="mes" id="selectMes">
-                                <option disabled selected>Mes</option>
+                            <select name="mes" id="selectMes" required>
+                                <option value="" disabled selected>Mes</option>
                             </select>
                         </div>
                         <div>
-                            <select name="year" id="selectYear">
-                                <option disabled selected>Año</option>
+                            <select name="year" id="selectYear" required>
+                                <option value="" disabled selected>Año</option>
                             </select>
                         </div>
                         <div>
                             <label for="inputCCV">CCV</label>
-                            <input id="inputCCV" type="text" placeholder="CCV" maxlength="3">
+                            <input id="inputCCV" type="text" placeholder="CCV" maxlength="3" required>
                         </div>
                     </fieldset>
                     <div class="btn_contenedor">
@@ -54,7 +54,6 @@
             </article>
         </section>
     </main>
-
     <script src="js/main.js"></script>
 </body>
 </html>
