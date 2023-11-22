@@ -14,10 +14,10 @@
                     <!-- <img src="img/mastercard.png" alt="logo tarjeta"> -->
                 </figure>
                 <p class="tarjeta_numero">#### #### #### ####</p>
-                <p class="tarjeta_nombre">Nicolas Cabre</p>
+                <p class="tarjeta_nombre">Nombre y apellido</p>
                 <div class="tarjeta_exp_ccv">
-                    <p>MM/YY</p>
-                    <p>XXX</p>
+                    <p><span class="mes_tarjeta">MM</span> / <span class="year_tarjeta">YY</span></p>
+                    <p class="ccv_tarjeta">XXX</p>
                 </div>
             </article>
             <article class="formulario_contenedor">
@@ -28,8 +28,8 @@
                         <input id="inputNumero" maxlength="19" type="text" placeholder="Numero tarjeta">
                     </fieldset>
                     <fieldset>
-                        <label for="lbl-nombres">Nombre y apellido</label>
-                        <input id="lbl-nombres" type="text" placeholder="Ej: Carlos Juarez">
+                        <label for="inputNombres">Nombre y apellido</label>
+                        <input id="inputNombres" type="text" placeholder="Ej: Carlos Juarez">
                     </fieldset>
                     <fieldset class="form_exp_ccv">
                         <div>
@@ -43,8 +43,8 @@
                             </select>
                         </div>
                         <div>
-                            <label for="lbl-ccv">CCV</label>
-                            <input id="lbl-ccv" type="text" placeholder="CCV" maxlength="3">
+                            <label for="inputCCV">CCV</label>
+                            <input id="inputCCV" type="text" placeholder="CCV" maxlength="3">
                         </div>
                     </fieldset>
                     <div class="btn_contenedor">

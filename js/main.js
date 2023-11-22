@@ -1,7 +1,11 @@
 const formulario = document.querySelector('#formulario'),
 tarjetaNumero = document.querySelector('.tarjeta_numero'),
 logoMarca = document.querySelector('.tarjeta_contenedor_logo'),
-tarjetaCard = document.querySelector('#tarjeta')   ;
+tarjetaCard = document.querySelector('#tarjeta'),
+nombreTarjeta = document.querySelector('.tarjeta_nombre'),
+ccvTarjeta = document.querySelector('.ccv_tarjeta'),
+mesTarjeta = document.querySelector('.mes_tarjeta'),
+yearTarjeta = document.querySelector('.year_tarjeta')   ;
 
 // * Select del mes generado dinamicamente.
 for(let i = 1; i <= 12; i++){
@@ -20,6 +24,7 @@ for(let i = yearActual; i <= yearActual + 8; i++){
 	formulario.selectYear.appendChild(opcion);
 }
 
+// Numero de la tarjeta en input + regex
 formulario.inputNumero.addEventListener('keyup', (e) => {
     let valorInput = e.target.value;
 
@@ -54,7 +59,50 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 		logoMarca.appendChild(imagen);
         tarjetaCard.classList.add('master');
 	} else{
-		logoMarca.innerHTML = '';
-        
+		logoMarca.innerHTML = '';       
     }
+})
+
+// Nombre Tarjeta
+formulario.inputNombres.addEventListener('keyup', (e) =>{
+	let valorInput = e.target.value.replace(/[0-9]/g, '');
+	nombreTarjeta.textContent = valorInput;
+
+    if(valorInput == ''){
+		nombreTarjeta.textContent = 'Nombre y apellido';
+	}
+})
+
+// Mes Tarjeta
+
+formulario.selectMes.addEventListener('change', (e) =>{
+	let valorInput = e.target.value;
+	mesTarjeta.textContent = valorInput
+})
+
+
+// Año Tarjeta
+formulario.selectYear.addEventListener('change', (e) =>{
+	let valorInput = e.target.value.slice(2);
+	yearTarjeta.textContent = valorInput
+})
+
+
+// CCV Tarjeta
+formulario.inputCCV.addEventListener('keyup', (e) =>{
+	let valorInput = e.target.value;
+	
+	formulario.inputCCV.value = valorInput
+	// Eliminamos espacios en blanco
+	.replace(/\s/g, '')
+	// Eliminar las letras
+	.replace(/\D/g, '')
+	// Elimina el ultimo espaciado
+	.trim();
+	
+	ccvTarjeta.textContent = valorInput
+
+    if(valorInput == ''){
+		ccvTarjeta.textContent = 'XXX';
+	}
 })
